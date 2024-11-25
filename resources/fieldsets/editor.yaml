@@ -21,7 +21,7 @@ fields:
       toolbar_mode: floating
       remove_empty_nodes: true
       type: bard
-      display: Text
+      display: Inhalt
       container: assets
       localizable: true
       unless:
@@ -29,7 +29,7 @@ fields:
       sets:
         elements:
           display: Elemente
-          instructions: 'Elemente hinzufügen'
+          instructions: 'Inhaltselemente hinzufügen'
           icon: addon-boxes-stack
           sets:
             single_image:
@@ -59,10 +59,23 @@ fields:
       toolbar_mode: floating
       remove_empty_nodes: true
       type: bard
-      display: 'Text (links)'
+      display: 'Inhalt (links)'
       width: 50
       if:
         two_columns: 'equals true'
+      sets:
+        elements:
+          display: Elemente
+          instructions: 'Inhaltselemente hinzufügen'
+          icon: addon-boxes-stack
+          sets:
+            singel_image:
+              display: Einzelbild
+              instructions: 'Einzelbild hinzufügen'
+              icon: media-image-picture-orientation
+              fields:
+                -
+                  import: single_image
   -
     handle: editor_right
     field:
@@ -76,7 +89,20 @@ fields:
       toolbar_mode: floating
       remove_empty_nodes: true
       type: bard
-      display: 'Text (rechts)'
+      display: 'Inhalt (rechts)'
       width: 50
       if:
         two_columns: 'equals true'
+      sets:
+        elements:
+          display: Elemente
+          instructions: 'Inhaltselemente hinzufügen'
+          icon: addon-boxes-stack
+          sets:
+            single_image:
+              display: Einzelbild
+              instructions: 'Einzelbild hinzufügen'
+              icon: media-image-picture-orientation
+              fields:
+                -
+                  import: single_image

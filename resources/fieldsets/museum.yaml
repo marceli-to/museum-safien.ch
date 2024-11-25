@@ -60,7 +60,7 @@ fields:
       toolbar_mode: floating
       remove_empty_nodes: true
       type: bard
-      display: 'Informationen (Spalte links)'
+      display: 'Inhalt (links)'
       width: 50
   -
     handle: information_right_column
@@ -75,7 +75,7 @@ fields:
       toolbar_mode: floating
       remove_empty_nodes: true
       type: bard
-      display: 'Informationen (Spalte rechts)'
+      display: 'Inhalt (rechts)'
       width: 50
   -
     import: image_gallery

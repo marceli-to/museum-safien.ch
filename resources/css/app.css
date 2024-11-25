@@ -34,7 +34,7 @@ main h1 {
 }
 
 main .content-text a {
-  @apply underline underline-offset-2 hover:no-underline
+  @apply underline underline-offset-2 decoration-1 hover:no-underline
 }
 
 main .content-text .text-ocean a {

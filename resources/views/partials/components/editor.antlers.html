@@ -1,18 +1,44 @@
 <div class="content-text px-16 lg:px-0 max-w-inner mx-auto">
-  <div class="flex flex-col space-y-30 lg:space-y-50">
-    {{ editor }}
-  
-      {{ if type == 'single_image' }}
-        {{ partial:media/single_image :image="single_image" :sizes="['2xl', 'xl', 'lg']" class="w-full h-auto aspect-[16/9]" preset="focal-16-9" }}
-      {{ /if }}
 
-      {{ if type == 'text' }}
-        <div>
-          {{ text }}
+  {{ if two_columns }}
+
+    {{ if editor_left || editor_right }}
+      <h2>{{ title }}</h2>
+      <div class="content-text lg:grid lg:grid-cols-2 lg:gap-x-40">
+        <div class="lg:col-span-1 text-pretty">
+          {{ editor_left }}
+            {{ if type == 'text' }}
+              {{ text }}
+            {{ /if }}
+          {{ /editor_left }}
         </div>
-      {{ /if }}
+        <div class="lg:col-span-1 text-pretty">
+          {{ editor_right }}
+            {{ if type == 'text' }}
+              {{ text }}
+            {{ /if }}
+          {{ /editor_right }}
+        </div>
+      </div>
 
-    {{ /editor }}
-  </div>
+    {{ /if }}
+
+  {{ else }}
+    <div class="flex flex-col space-y-30 lg:space-y-50">
+      {{ editor }}
+    
+        {{ if type == 'single_image' }}
+          {{ partial:media/single_image :image="single_image" :sizes="['2xl', 'xl', 'lg']" class="w-full h-auto aspect-[16/9]" preset="focal-16-9" }}
+        {{ /if }}
+
+        {{ if type == 'text' }}
+          <div>
+            {{ text }}
+          </div>
+        {{ /if }}
+
+      {{ /editor }}
+    </div>
+  {{ /if }}
 </div>
 
