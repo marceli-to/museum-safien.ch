@@ -1,38 +1,57 @@
-<div class="px-16 lg:px-0 max-w-inner mx-auto mb-50 lg:mb-100">
-  
-  {{ if logo == 'safien-camana' || logo == 'safien-platz' }}
-    <div class="mb-20 lg:mb-35">
-      {{ if logo == 'safien-camana' }}
-      {{ partial:icons/logo/museum-safien-camana class="w-190 lg:w-[298px] h-auto block" }}
-      {{ /if }}
-      {{ if logo == 'safien-platz' }}
-        {{ partial:icons/logo/museum-safien-platz class="w-190 lg:w-[298px] h-auto block" }}
-      {{ /if }}
-    </div>
-  {{ /if }}
-
-  {{ if image }}
-  {{ partial:media/single_image :sizes="['2xl', 'xl', 'lg']" class="w-full h-auto aspect-[16/9]" preset="focal-16-9" }}
-  {{ /if }}
-
-  {{ if title }}
-    <h2 class="mt-20 lg:mt-60"> {{ title }}</h2>
-  {{ /if }}
-
-  {{ if lead }}
-    <div class="content-text">
-      {{ lead}}
-    </div>
-  {{ /if }}
-
-  {{ if information_left_column || information_right_column }}
-    <div class="content-text flex flex-col gap-y-25 lg:grid lg:grid-cols-2 lg:gap-x-40 mt-20 lg:mt-60">
-      <div class="lg:col-span-1 text-pretty">
-        {{ information_left_column }}
+<div class="mb-60 lg:mb-120">
+  <div class="px-16 lg:px-0 max-w-inner mx-auto">
+    
+    {{ if logo == 'safien-camana' || logo == 'safien-platz' }}
+      <div class="mb-20 lg:mb-35">
+        {{ if logo == 'safien-camana' }}
+        {{ partial:icons/logo/museum-safien-camana class="w-190 lg:w-[298px] h-auto block" }}
+        {{ /if }}
+        {{ if logo == 'safien-platz' }}
+          {{ partial:icons/logo/museum-safien-platz class="w-190 lg:w-[298px] h-auto block" }}
+        {{ /if }}
       </div>
-      <div class="lg:col-span-1 text-pretty">
-        {{ information_right_column }}
+    {{ /if }}
+
+    {{ if image }}
+    {{ partial:media/single_image :sizes="['2xl', 'xl', 'lg']" class="w-full h-auto aspect-[16/9]" preset="focal-16-9" }}
+    {{ /if }}
+
+    {{ if title }}
+      <h2 class="mt-20 lg:mt-60"> {{ title }}</h2>
+    {{ /if }}
+
+    {{ if lead }}
+      <div class="content-text">
+        {{ lead}}
       </div>
+    {{ /if }}
+
+    {{ if information_left_column || information_right_column }}
+      <div class="content-text flex flex-col gap-y-25 lg:grid lg:grid-cols-2 lg:gap-x-40 mt-20 lg:mt-60">
+        <div class="lg:col-span-1 text-pretty">
+          {{ information_left_column }}
+        </div>
+        <div class="lg:col-span-1 text-pretty">
+          {{ information_right_column }}
+        </div>
+      </div>
+    {{ /if }}
+  </div>
+
+  {{ if images }}
+    <div class="mt-30 lg:mt-80 lg:px-50 relative">
+      {{ partial:swiper/wrapper }}
+        {{ images }}
+          {{ partial:swiper/slide :image="url" :alt="alt" :width="width" :height="height" }}
+        {{ /images }}
+      {{ /partial:swiper/wrapper }}
+      <div class="swiper-caption font-bold text-xs lg:text-lg absolute -bottom-25 lg:-bottom-40">asdf</div>
+      <a href="#" class="absolute left-15 lg:left-0 top-1/2 -translate-y-[50%] z-20 swiper-btn-prev">
+        {{ partial:icons/chevron-left class="w-16 lg:w-24 h-auto" }}
+      </a>
+      <a href="#" class="absolute right-15 lg:right-0 top-1/2 -translate-y-[50%] z-20 swiper-btn-next">
+        {{ partial:icons/chevron-right class="w-16 lg:w-24 h-auto" }}
+      </a>    
     </div>
   {{ /if }}
 </div>

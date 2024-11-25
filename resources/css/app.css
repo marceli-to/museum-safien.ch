@@ -50,7 +50,10 @@ main .content-text .text-ocean a {
   @apply underline underline-offset-4 hover:no-underline
 }
 
+.swiper {
+  @apply aspect-video
+}
+
 .page-privacy main h2 {
   @apply text-black font-bold text-lg lg:text-3xl lg:mb-0
-
 }
