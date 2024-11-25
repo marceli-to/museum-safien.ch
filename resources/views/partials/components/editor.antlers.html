@@ -1,14 +1,18 @@
 <div class="content-text px-16 lg:px-0 max-w-inner mx-auto">
-  {{ editor }}
+  <div class="flex flex-col space-y-30 lg:space-y-50">
+    {{ editor }}
   
-    {{ if type == 'single_image' }}
-      {{ partial:media/single_image :image="single_image" :sizes="['2xl', 'xl', 'lg']" class="w-full h-auto aspect-[16/9]" preset="focal-16-9" }}
-    {{ /if }}
+      {{ if type == 'single_image' }}
+        {{ partial:media/single_image :image="single_image" :sizes="['2xl', 'xl', 'lg']" class="w-full h-auto aspect-[16/9]" preset="focal-16-9" }}
+      {{ /if }}
 
-    {{ if type == 'text'}}
-      {{ text }}
-    {{ /if }}
-  
-  {{ /editor }}
+      {{ if type == 'text' }}
+        <div>
+          {{ text }}
+        </div>
+      {{ /if }}
+
+    {{ /editor }}
+  </div>
 </div>
 

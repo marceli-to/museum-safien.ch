@@ -1,6 +1,11 @@
 title: Editor
 fields:
   -
+    handle: two_columns
+    field:
+      type: toggle
+      display: '2-spaltig?'
+  -
     handle: editor
     field:
       buttons:
@@ -19,6 +24,8 @@ fields:
       display: Text
       container: assets
       localizable: true
+      unless:
+        two_columns: 'equals true'
       sets:
         elements:
           display: Elemente
@@ -32,3 +39,44 @@ fields:
               fields:
                 -
                   import: single_image
+  -
+    handle: title
+    field:
+      type: text
+      display: Titel
+      if:
+        two_columns: 'equals true'
+  -
+    handle: editor_left
+    field:
+      buttons:
+        - h3
+        - bold
+        - unorderedlist
+        - removeformat
+        - anchor
+        - nobr
+      toolbar_mode: floating
+      remove_empty_nodes: true
+      type: bard
+      display: 'Text (links)'
+      width: 50
+      if:
+        two_columns: 'equals true'
+  -
+    handle: editor_right
+    field:
+      buttons:
+        - h3
+        - bold
+        - unorderedlist
+        - removeformat
+        - anchor
+        - nobr
+      toolbar_mode: floating
+      remove_empty_nodes: true
+      type: bard
+      display: 'Text (rechts)'
+      width: 50
+      if:
+        two_columns: 'equals true'
