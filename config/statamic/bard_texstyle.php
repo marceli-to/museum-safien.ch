@@ -23,13 +23,13 @@ return [
         //     'cp_badge' => false,
         // ],
 
-        'nobr' => [
-          'type' => 'span',
-          'name' => 'No Break',
-          'ident' => 'B',
+        'lead' => [
+          'type' => 'paragraph',
+          'name' => 'Lead',
+          'ident' => 'L',
           'icon' => null,
-          'class' => 'nobr',
-          'cp_css' => 'white-space: nowrap',
+          'class' => 'text-ocean text-md lg:text-3xl leading-[1.4]',
+          'cp_css' => 'font-size: 20px; line-height: 1.4',
           'cp_badge' => false,
         ],
 

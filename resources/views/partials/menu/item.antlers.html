@@ -1,26 +1,10 @@
-<li class="block h-auto w-full md:w-auto border-b border-frost lg:border-none lg:relative group">
+<li>
   <a 
     href="{{ url }}" 
-    class="menu-item {{ is_current || is_parent ? 'is-active' : '' }}"
+    @click="menu = false"
+    class="block font-bold text-lg lg:text-4xl text-center hover:underline underline-offset-8 lg:underline-offset-12 decoration-1 lg:decoration-2 w-full {{ is_current || is_parent ? 'underline' : '' }}"
     target="{{ is_external ? '_blank' : '_self' }}"
     title="{{ title }}">
     {{ title }}
-  </a>
-  {{ if children }}
-    <ul class="lg:absolute lg:top-full lg:pt-10 lg:-left-10 lg:hidden lg:group-hover:block">
-      <span class="block lg:bg-mist lg:px-10 lg:py-5 lg:min-w-185">
-        {{ children }}
-          <li>
-            <a 
-              href="{{ url }}" 
-              class="block py-6 pl-20 lg:pl-0 text-base md:text-base hover:text-flare transition-colors duration-300 {{ is_current || is_parent ? 'text-flare' : '' }}"
-              target="{{ is_external ? '_blank' : '_self' }}"
-              title="{{ title }}">
-              {{ title }}
-            </a>
-          </li>
-        {{ /children }}
-      </span>
-    </ul>
-  {{ /if }}
+   </a>
 </li>

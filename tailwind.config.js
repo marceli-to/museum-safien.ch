@@ -18,20 +18,35 @@ export default {
         'xs': '480px',
       },
 
+      maxWidth: {
+        'outer': '1060px',
+        'inner': '920px',
+      },
+
       fontFamily: {
-        'futura-pt': ['futura-pt', ...defaultTheme.fontFamily.sans],
-        'futura-pt-condensed': ['futura-pt-condensed', ...defaultTheme.fontFamily.sans],
+        'axia': ['axia', ...defaultTheme.fontFamily.sans],
       },
 
       colors: {
-
+        'olive': '#8B9D48',
+        'stone': '#625F58',
+        'ocean': '#2A6D94',
+        'sky': '#D0DBE4',
       },      
 
       fontSize: {
-        'sm': '0.875rem', // 14px
-        'base': '1rem',   // 16px 
-        'md': '1.125rem', // 18px
-        'lg': '1.625rem', // 26px
+        'xs': '0.75rem',  // 12px
+        'sm': '0.8125rem', // 13px
+        'md': '1.0625rem', // 17px
+        'lg': '1.3125rem', // 21px
+        'xl': '1.25rem',   // 20px
+        '2xl': '1.375rem', // 22px
+        '3xl': '1.6875rem', // 27px
+        '4xl': '2.5rem',   // 40px
+      },
+      
+      textUnderlineOffset: {
+        12: '12px',
       },
       
       zIndex: {

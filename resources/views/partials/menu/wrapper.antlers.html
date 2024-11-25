@@ -7,10 +7,13 @@
     x-transition:leave="transition ease-in duration-240"
     x-transition:leave-start="opacity-100"
     x-transition:leave-end="opacity-0"
-    class="bg-white min-h-[calc(100dvh_-_80px)] md:min-h-[calc(100dvh_-_96px)] lg:min-h-0 text-graphite lg:text-black leading-none font-futura-pt-condensed uppercase fixed w-full lg:w-auto left-0 top-0 lg:relative lg:top-56 lg:!opacity-100 lg:!block px-10 md:px-15 lg:px-0 mt-80 md:mt-96 lg:mt-0">
-    <ul class="lg:flex lg:space-x-20">
-      {{ nav:main }}
-        {{ partial:menu/item }}
-      {{ /nav:main }}
-    </ul>
+    class="bg-sky text-ocean fixed w-full h-dvh left-0 top-0">
+    <div class="w-full h-dvh flex items-center justify-center px-20 relative">
+      <ul class="flex flex-col gap-y-20 lg:gap-y-30 leading-[1.28]">
+        {{ nav:main }}
+          {{ partial:menu/item }}
+        {{ /nav:main }}
+      </ul>
+      {{ partial:menu/buttons/hide class="block w-30 lg:w-46 h-auto absolute right-20 top-27 lg:right-50 lg:top-50" }}
+    </div>
   </nav>

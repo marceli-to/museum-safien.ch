@@ -11,7 +11,7 @@ fields:
         - unorderedlist
         - removeformat
         - anchor
-        - nobr
+        - lead
       toolbar_mode: floating
       remove_empty_nodes: true
       type: bard

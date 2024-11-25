@@ -9,3 +9,17 @@
 main {
   @apply flex-1;
 }
+
+main p {
+  @apply mb-25
+}
+
+main h1,
+main h2,
+main h3 {
+  @apply uppercase
+}
+
+main h1 {
+  @apply text-olive font-bold text-lg lg:text-4xl min-h-80
+}

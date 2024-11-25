@@ -1,0 +1,14 @@
+title: Einzelbild
+fields:
+  -
+    handle: single_image
+    field:
+      max_files: 1
+      container: assets
+      type: assets
+      display: Bild
+  -
+    handle: caption
+    field:
+      type: textarea
+      display: Legende

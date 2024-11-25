@@ -27,9 +27,27 @@ tabs:
                   display: Hauptelemente
                   icon: addon-boxes-stack
                   sets:
-                    neues_set:
-                      display: 'Neues Set'
-                      fields: {  }
+                    single_image:
+                      display: Einzelbild
+                      instructions: 'Einzelbild hinzufügen'
+                      icon: media-image-picture-orientation
+                      fields:
+                        -
+                          import: single_image
+                    anchor:
+                      display: Anker
+                      instructions: 'Anker hinzufügen'
+                      icon: link
+                      fields:
+                        -
+                          import: anchor
+                    editor:
+                      display: Editor
+                      instructions: 'Editor hinzufügen'
+                      icon: text-formatting-markdown
+                      fields:
+                        -
+                          import: editor
   seo:
     display: SEO
     sections:
