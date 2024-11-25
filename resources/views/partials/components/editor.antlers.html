@@ -1,4 +1,14 @@
 <div class="content-text px-16 lg:px-0 max-w-inner mx-auto">
   {{ editor }}
+  
+    {{ if type == 'single_image' }}
+      {{ partial:media/single_image :image="single_image" :sizes="['2xl', 'xl', 'lg']" class="w-full h-auto aspect-[16/9]" preset="focal-16-9" }}
+    {{ /if }}
+
+    {{ if type == 'text'}}
+      {{ text }}
+    {{ /if }}
+  
+  {{ /editor }}
 </div>
 

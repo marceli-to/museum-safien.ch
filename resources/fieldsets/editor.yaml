@@ -11,6 +11,7 @@ fields:
         - unorderedlist
         - removeformat
         - anchor
+        - nobr
         - lead
       toolbar_mode: floating
       remove_empty_nodes: true
@@ -18,5 +19,16 @@ fields:
       display: Text
       container: assets
       localizable: true
-      if:
-        columns: 'equals one'
+      sets:
+        elements:
+          display: Elemente
+          instructions: 'Elemente hinzufügen'
+          icon: addon-boxes-stack
+          sets:
+            single_image:
+              display: Einzelbild
+              instructions: 'Einzelbild hinzufügen'
+              icon: media-image-picture-orientation
+              fields:
+                -
+                  import: single_image

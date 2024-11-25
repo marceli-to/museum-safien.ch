@@ -38,8 +38,8 @@ export default {
         'xs': '0.75rem',  // 12px
         'sm': '0.8125rem', // 13px
         'md': '1.0625rem', // 17px
-        'lg': '1.3125rem', // 21px
-        'xl': '1.25rem',   // 20px
+        'lg': '1.25rem',   // 20px
+        'xl': '1.3125rem', // 21px
         '2xl': '1.375rem', // 22px
         '3xl': '1.6875rem', // 27px
         '4xl': '2.5rem',   // 40px
