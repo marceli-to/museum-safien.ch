@@ -55,6 +55,11 @@ tabs:
                       fields:
                         -
                           import: museum
+                    hr:
+                      display: Trenner
+                      instructions: 'Trenner hinzufügen'
+                      icon: align-object-top
+                      fields: {  }
   seo:
     display: SEO
     sections:

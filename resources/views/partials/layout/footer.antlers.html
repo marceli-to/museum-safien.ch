@@ -1,5 +1,19 @@
-<footer>
-
+<footer class="bg-sky h-80 lg:h-200">
+  <div class="max-w-inner mx-auto">
+    <ul class="flex flex-col justify-end h-80 lg:h-200 px-36 lg:px-0 pb-20 lg:pb-30">
+      {{ nav:privacy }}
+        <li>
+          <a 
+            href="{{ url }}" 
+            class="block text-ocean"
+            target="{{ is_external ? '_blank' : '_self' }}"
+            title="{{ title }}">
+            {{ title }}
+           </a>
+        </li>
+      {{ /nav:privacy }}
+    </ul>
+  </div>
 </footer>
 {{ vite src="resources/js/app.js" }}
 {{ livewire:scripts }}

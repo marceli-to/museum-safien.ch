@@ -2,6 +2,7 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 export default {
+
   content: [
     './resources/**/*.antlers.html',
     './resources/**/*.antlers.php',
@@ -12,6 +13,7 @@ export default {
   ],
 
   theme: {
+    
     extend: {
 
       screens: {

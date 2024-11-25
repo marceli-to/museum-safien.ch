@@ -26,6 +26,8 @@ fields:
       localizable: true
       unless:
         two_columns: 'equals true'
+      link_collections:
+        - pages
       sets:
         elements:
           display: Elemente
@@ -63,6 +65,9 @@ fields:
       width: 50
       if:
         two_columns: 'equals true'
+      link_collections:
+        - pages
+      container: assets
       sets:
         elements:
           display: Elemente
@@ -93,6 +98,9 @@ fields:
       width: 50
       if:
         two_columns: 'equals true'
+      link_collections:
+        - pages
+      container: assets
       sets:
         elements:
           display: Elemente

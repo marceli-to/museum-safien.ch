@@ -10,8 +10,17 @@ main {
   @apply flex-1;
 }
 
-main p:not(:last-child) {
+main p:not(:last-child),
+main ul:not(:last-child) {
   @apply mb-20 lg:mb-30
+}
+
+main ul {
+  @apply list-disc pl-5
+}
+
+main li {
+  @apply ml-12
 }
 
 main strong {
@@ -39,4 +48,9 @@ main .content-text a {
 
 main .content-text .text-ocean a {
   @apply underline underline-offset-4 hover:no-underline
+}
+
+.page-privacy main h2 {
+  @apply text-black font-bold text-lg lg:text-3xl lg:mb-0
+
 }
