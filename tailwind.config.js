@@ -18,7 +18,7 @@ export default {
 
       screens: {
         'xs': '480px',
-        'lg': '900px',
+        'lg': '768px',
       },
 
       maxWidth: {
