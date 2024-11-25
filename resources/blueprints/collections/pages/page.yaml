@@ -48,6 +48,13 @@ tabs:
                       fields:
                         -
                           import: editor
+                    museum:
+                      display: Museum
+                      instructions: 'Museum hinzufügen'
+                      icon: text-formatting-image-bottom
+                      fields:
+                        -
+                          import: museum
   seo:
     display: SEO
     sections:

@@ -1,0 +1,8 @@
+title: Bildergalerie
+fields:
+  -
+    handle: images
+    field:
+      container: assets
+      type: assets
+      display: Bilder

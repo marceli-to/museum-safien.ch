@@ -18,3 +18,5 @@ fields:
       display: Text
       container: assets
       localizable: true
+      if:
+        columns: 'equals one'

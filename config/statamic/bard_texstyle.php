@@ -13,15 +13,15 @@ return [
 
     'styles' => [
 
-        // 'title' => [
-        //     'type' => 'heading_1',
-        //     'name' => 'Title',
-        //     'ident' => 'T',
-        //     'icon' => null,
-        //     'class' => 'title',
-        //     'cp_css' => 'text-decoration: underline; text-underline-offset: 0.1em; text-decoration-color: #c5ccd4',
-        //     'cp_badge' => false,
-        // ],
+        'nobr' => [
+          'type' => 'span',
+          'name' => 'No Break',
+          'ident' => 'B',
+          'icon' => null,
+          'class' => 'whitespace-nowrap',
+          'cp_css' => 'white-space: nowrap;',
+          'cp_badge' => false,
+        ],
 
         'lead' => [
           'type' => 'paragraph',

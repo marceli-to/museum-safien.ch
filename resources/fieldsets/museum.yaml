@@ -1,0 +1,81 @@
+title: Museum
+fields:
+  -
+    handle: logo
+    field:
+      options:
+        -
+          key: safien-camana
+          value: 'Safien Camana'
+        -
+          key: safien-platz
+          value: 'Safien Platz'
+      type: select
+      display: Logo
+  -
+    handle: image
+    field:
+      max_files: 1
+      container: assets
+      type: assets
+      display: Bild
+      width: 50
+  -
+    handle: caption
+    field:
+      type: textarea
+      display: Bildlegende
+      width: 50
+  -
+    handle: title
+    field:
+      type: text
+      display: Titel
+  -
+    handle: lead
+    field:
+      buttons:
+        - h2
+        - h3
+        - bold
+        - unorderedlist
+        - removeformat
+        - anchor
+        - h1
+        - lead
+      toolbar_mode: floating
+      remove_empty_nodes: true
+      type: bard
+      display: Leadtext
+  -
+    handle: information_left_column
+    field:
+      buttons:
+        - h3
+        - bold
+        - unorderedlist
+        - removeformat
+        - anchor
+        - nobr
+      toolbar_mode: floating
+      remove_empty_nodes: true
+      type: bard
+      display: 'Informationen (Spalte links)'
+      width: 50
+  -
+    handle: information_right_column
+    field:
+      buttons:
+        - h3
+        - bold
+        - unorderedlist
+        - removeformat
+        - anchor
+        - nobr
+      toolbar_mode: floating
+      remove_empty_nodes: true
+      type: bard
+      display: 'Informationen (Spalte rechts)'
+      width: 50
+  -
+    import: image_gallery

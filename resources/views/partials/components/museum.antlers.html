@@ -1,0 +1,40 @@
+<div class="px-16 lg:px-0 max-w-inner mx-auto mb-50 lg:mb-100">
+  
+  {{ if logo == 'safien-camana' || logo == 'safien-platz' }}
+    <div class="mb-20 lg:mb-35">
+      {{ if logo == 'safien-camana' }}
+      {{ partial:icons/logo/museum-safien-camana class="w-190 lg:w-[298px] h-auto block" }}
+      {{ /if }}
+      {{ if logo == 'safien-platz' }}
+        {{ partial:icons/logo/museum-safien-platz class="w-190 lg:w-[298px] h-auto block" }}
+      {{ /if }}
+    </div>
+  {{ /if }}
+
+
+
+  {{ if image }}
+  {{ partial:media/single_image :sizes="['2xl', 'xl', 'lg']" class="w-full h-auto aspect-[16/9]" preset="focal-16-9" }}
+  {{ /if }}
+
+  {{ if title }}
+    <h2 class="mt-20 lg:mt-60"> {{ title }}</h2>
+  {{ /if }}
+
+  {{ if lead }}
+    <div class="content-text">
+      {{ lead}}
+    </div>
+  {{ /if }}
+
+  {{ if information_left_column || information_right_column }}
+    <div class="content-text flex flex-col gap-y-25 lg:grid lg:grid-cols-2 lg:gap-x-40 mt-20 lg:mt-60">
+      <div class="lg:col-span-1 text-pretty">
+        {{ information_left_column }}
+      </div>
+      <div class="lg:col-span-1 text-pretty">
+        {{ information_right_column }}
+      </div>
+    </div>
+  {{ /if}}
+</div>

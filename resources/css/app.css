@@ -10,16 +10,33 @@ main {
   @apply flex-1;
 }
 
-main p {
-  @apply mb-25
+main p:not(:last-child) {
+  @apply mb-20 lg:mb-30
+}
+
+main strong {
+  @apply font-bold
 }
 
 main h1,
 main h2,
 main h3 {
-  @apply uppercase
+  @apply uppercase font-bold
+}
+
+main h1,
+main h2 {
+  @apply text-olive font-bold text-lg lg:text-4xl mb-20 lg:mb-35
 }
 
 main h1 {
-  @apply text-olive font-bold text-lg lg:text-4xl min-h-80
+  @apply -mt-5
+}
+
+main .content-text a {
+  @apply underline underline-offset-2 hover:no-underline
+}
+
+main .content-text .text-ocean a {
+  @apply underline underline-offset-4 hover:no-underline
 }
