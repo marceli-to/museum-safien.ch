@@ -28,12 +28,16 @@
 
     {{ if information_left_column || information_right_column }}
       <div class="content-text flex flex-col gap-y-25 lg:grid lg:grid-cols-2 lg:gap-x-40 mt-20 lg:mt-60">
-        <div class="lg:col-span-1 text-pretty">
-          {{ information_left_column }}
-        </div>
-        <div class="lg:col-span-1 text-pretty">
-          {{ information_right_column }}
-        </div>
+        {{ if information_left_column }}
+          <div class="lg:col-span-1 text-pretty">
+            {{ information_left_column }}
+          </div>
+        {{ /if }}
+        {{ if information_right_column }}
+          <div class="lg:col-span-1 text-pretty">
+            {{ information_right_column }}
+          </div>
+        {{ /if }}
       </div>
     {{ /if }}
   </div>

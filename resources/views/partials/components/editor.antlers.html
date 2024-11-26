@@ -5,37 +5,44 @@
     {{ if editor_left || editor_right }}
       <h2>{{ title }}</h2>
       <div class="flex flex-col space-y-25 lg:space-y-0 lg:grid lg:grid-cols-2 lg:gap-x-40">
-        <div class=" lg:col-span-1 text-pretty">
-          {{ editor_left }}
+        
+        {{ if editor_left }}
+          <div class=" lg:col-span-1 text-pretty">
+            {{ editor_left }}
 
-            {{ if type == 'text' }}
-              {{ text }}
-            {{ /if }}
+              {{ if type == 'text' }}
+                {{ text }}
+              {{ /if }}
 
-            {{ if type == 'single_image' }}
-              {{ partial:media/single_image :image="single_image" :sizes="['lg']" class="w-full h-auto" preset="focal-16-9" }}
-            {{ /if }}
+              {{ if type == 'single_image' }}
+                {{ partial:media/single_image :image="single_image" :sizes="['lg']" class="w-full h-auto" preset="focal-16-9" }}
+              {{ /if }}
 
-          {{ /editor_left }}
-        </div>
-        <div class="lg:col-span-1 text-pretty">
-          {{ editor_right }}
+            {{ /editor_left }}
+          </div>
+        {{ /if }}
 
-            {{ if type == 'text' }}
-              {{ text }}
-            {{ /if }}
+        {{ if editor_right }}
+          <div class="lg:col-span-1 text-pretty">
+            {{ editor_right }}
 
-            {{ if type == 'single_image' }}
-              {{ partial:media/single_image 
-                  :image="single_image" 
-                  :sizes="['lg']" 
-                  class="w-full h-auto" 
-                  captionClass="!pt-5 lg:!pt-10"
-                  preset="focal-16-9" }}
-            {{ /if }}
+              {{ if type == 'text' }}
+                {{ text }}
+              {{ /if }}
 
-          {{ /editor_right }}
-        </div>
+              {{ if type == 'single_image' }}
+                {{ partial:media/single_image 
+                    :image="single_image" 
+                    :sizes="['lg']" 
+                    class="w-full h-auto" 
+                    captionClass="!pt-5 lg:!pt-10"
+                    preset="focal-16-9" }}
+              {{ /if }}
+
+            {{ /editor_right }}
+          </div>
+        {{ /if }}
+
       </div>
 
     {{ /if }}
