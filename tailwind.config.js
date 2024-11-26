@@ -29,6 +29,12 @@ export default {
         'axia': ['axia', ...defaultTheme.fontFamily.sans],
       },
 
+      backgroundImage: {
+        'lightbox-prev': "url(img/chevron-left.svg)",
+        'lightbox-next': "url(img/chevron-right.svg)",
+        'lightbox-close': "url(img/cross.svg)",
+      },
+
       colors: {
         'olive': '#8B9D48',
         'stone': '#625F58',

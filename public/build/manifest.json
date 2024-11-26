@@ -1,18 +1,30 @@
 {
   "resources/css/app.css": {
-    "file": "assets/app-d3e6212a.css",
+    "file": "assets/app-0e0415a8.css",
     "isEntry": true,
     "src": "resources/css/app.css"
   },
+  "resources/img/chevron-left.svg": {
+    "file": "assets/chevron-left-0e56d43a.svg",
+    "src": "resources/img/chevron-left.svg"
+  },
+  "resources/img/chevron-right.svg": {
+    "file": "assets/chevron-right-d016c9ee.svg",
+    "src": "resources/img/chevron-right.svg"
+  },
+  "resources/img/cross.svg": {
+    "file": "assets/cross-517bfe58.svg",
+    "src": "resources/img/cross.svg"
+  },
   "resources/js/app.css": {
-    "file": "assets/app-d66ac298.css",
+    "file": "assets/app-784f8f85.css",
     "src": "resources/js/app.css"
   },
   "resources/js/app.js": {
     "css": [
-      "assets/app-d66ac298.css"
+      "assets/app-784f8f85.css"
     ],
-    "file": "assets/app-1fe2146e.js",
+    "file": "assets/app-5f4b4a95.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   }
