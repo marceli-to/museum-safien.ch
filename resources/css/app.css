@@ -7,6 +7,10 @@
 
 [x-cloak] { display: none !important; }
 
+body {
+  font-variant-numeric: lining-nums !important;
+}
+
 main {
   @apply flex-1;
 }
