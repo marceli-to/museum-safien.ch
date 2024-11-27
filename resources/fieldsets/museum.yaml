@@ -79,3 +79,19 @@ fields:
       width: 50
   -
     import: image_gallery
+  -
+    handle: text
+    field:
+      buttons:
+        - h2
+        - h3
+        - bold
+        - unorderedlist
+        - removeformat
+        - anchor
+        - h1
+        - lead
+      toolbar_mode: floating
+      remove_empty_nodes: true
+      type: bard
+      display: Text

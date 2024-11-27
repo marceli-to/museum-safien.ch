@@ -1,4 +1,4 @@
-<div class="mb-60 lg:mb-120">
+<div class="{{ text ? 'mb-40 lg:mb-80' : 'mb-60 lg:mb-120'}}">
   <div class="px-16 lg:px-0 max-w-inner mx-auto">
     
     {{ if logo == 'safien-camana' || logo == 'safien-platz' }}
@@ -40,6 +40,13 @@
         {{ /if }}
       </div>
     {{ /if }}
+
+    {{ if text }}
+      <div class="content-text mt-20 lg:mt-60">
+        {{ text }}
+      </div>
+    {{ /if }}
+
   </div>
 
   {{ if images }}
