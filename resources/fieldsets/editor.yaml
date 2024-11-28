@@ -41,6 +41,39 @@ fields:
               fields:
                 -
                   import: single_image
+            multiple_images:
+              display: 'Mehrere Bilder'
+              instructions: 'Mehrere Bilder nenbeinander platzieren'
+              icon: media-image-picture-gallery
+              fields:
+                -
+                  handle: images
+                  field:
+                    type: replicator
+                    display: Bilder
+                    sets:
+                      elements:
+                        display: Elemente
+                        instructions: 'Elemente hinzufügen'
+                        icon: addon-boxes-stack
+                        sets:
+                          image:
+                            display: Bild
+                            instructions: 'Bild platzieren'
+                            icon: media-image-picture-orientation
+                            fields:
+                              -
+                                handle: image
+                                field:
+                                  max_files: 1
+                                  container: assets
+                                  type: assets
+                                  display: Bild
+                -
+                  handle: caption
+                  field:
+                    type: textarea
+                    display: Legende
   -
     handle: title
     field:

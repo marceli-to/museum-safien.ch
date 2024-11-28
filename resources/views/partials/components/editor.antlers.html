@@ -15,7 +15,12 @@
               {{ /if }}
 
               {{ if type == 'single_image' }}
-                {{ partial:media/single_image :image="single_image" :sizes="['lg']" class="w-full h-auto" preset="focal-16-9" }}
+                {{ partial:media/single_image 
+                  :image="single_image" 
+                  :sizes="['lg']" 
+                  class="w-full h-auto" 
+                  captionClass="!pt-5 lg:!pt-10"
+                  preset="focal-4-3" }}
               {{ /if }}
 
             {{ /editor_left }}
@@ -32,11 +37,11 @@
 
               {{ if type == 'single_image' }}
                 {{ partial:media/single_image 
-                    :image="single_image" 
-                    :sizes="['lg']" 
-                    class="w-full h-auto" 
-                    captionClass="!pt-5 lg:!pt-10"
-                    preset="focal-16-9" }}
+                  :image="single_image" 
+                  :sizes="['lg']" 
+                  class="w-full h-auto" 
+                  captionClass="!pt-5 lg:!pt-10"
+                  preset="focal-4-3" }}
               {{ /if }}
 
             {{ /editor_right }}
@@ -52,8 +57,20 @@
       {{ editor }}
     
         {{ if type == 'single_image' }}
-          {{ partial:media/single_image :image="single_image" :sizes="['2xl', 'xl', 'lg']" class="w-full h-auto aspect-[16/9]" preset="focal-16-9" }}
+          {{ partial:media/single_image :image="single_image" :sizes="['2xl', 'xl', 'lg']" class="w-full h-auto aspect-[4/3]" preset="focal-4-3" }}
         {{ /if }}
+
+        {{ if type == 'multiple_images' }}
+          <div class="flex flex-col space-y-15 lg:space-y-0 lg:grid lg:grid-cols-2 lg:gap-x-20">
+            {{ images }}
+              {{ partial:media/multiple_image wrapperClass="lg:col-span-1" :image="image" :sizes="['2xl', 'xl', 'lg']" class="w-full h-auto aspect-[4/3]" preset="focal-4-3" }}
+            {{ /images }}
+            <div class="lg:col-span-full lg:pt-15 font-bold text-xs lg:text-lg">
+              {{ caption | nl2br }}
+            </div>
+          </div>
+        {{ /if }}
+
 
         {{ if type == 'text' }}
           <div>

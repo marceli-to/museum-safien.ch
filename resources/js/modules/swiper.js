@@ -26,9 +26,12 @@ const swiper = new Swiper('.swiper', {
 });
 
 function updateCaption(swiper) {
+  // i have added 'data-swiper-type' to the swiper wrapper.
+  // make sure to update the caption that's inside this swiper instance
+  const swiperType = swiper.el.dataset.swiperType;
   const activeSlide = swiper.slides[swiper.activeIndex];
   const img = activeSlide.querySelector('img');
-  const caption = document.querySelector('.swiper-caption');
+  const caption = document.querySelector(`.swiper-caption[data-swiper-caption="${swiperType}"] > div`);
   if (caption && img) {
     caption.textContent = img.getAttribute('alt') || '';
   }

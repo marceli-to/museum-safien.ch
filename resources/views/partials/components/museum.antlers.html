@@ -1,4 +1,4 @@
-<div class="{{ text ? 'mb-40 lg:mb-80' : 'mb-60 lg:mb-120'}}">
+<div class="mb-30 lg:mb-60">
   <div class="px-16 lg:px-0 max-w-inner mx-auto">
     
     {{ if logo == 'safien-camana' || logo == 'safien-platz' }}
@@ -51,18 +51,20 @@
 
   {{ if images }}
     <div class="mt-30 lg:mt-80 lg:px-50 relative">
-      {{ partial:swiper/wrapper }}
+      {{ partial:swiper/wrapper :swiperType="id" }}
         {{ images }}
           {{ partial:swiper/slide :image="url" :alt="alt" :width="width" :height="height" }}
         {{ /images }}
       {{ /partial:swiper/wrapper }}
-      <div class="swiper-caption font-bold text-xs lg:text-lg absolute -bottom-25 lg:-bottom-40">asdf</div>
       <a href="#" class="absolute left-15 lg:left-0 top-1/2 -translate-y-[50%] z-20 swiper-btn-prev">
         {{ partial:icons/chevron-left class="w-16 lg:w-24 h-auto" }}
       </a>
       <a href="#" class="absolute right-15 lg:right-0 top-1/2 -translate-y-[50%] z-20 swiper-btn-next">
         {{ partial:icons/chevron-right class="w-16 lg:w-24 h-auto" }}
       </a>    
+    </div>
+    <div class="swiper-caption font-bold text-center w-full text-xs lg:text-lg" data-swiper-caption="{{id}}">
+      <div class="max-w-3xl mx-auto pt-10"></div>
     </div>
   {{ /if }}
 </div>

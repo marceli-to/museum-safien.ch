@@ -22,9 +22,4 @@
       class="block {{ class ?? '' }}"
       loading="lazy">
   </picture>
-  {{ if caption }}
-    <figcaption class="pt-10 lg:pt-15 font-bold text-xs lg:text-lg {{ captionClass }}">
-      {{ caption | nl2br }}
-    </figcaption>
-  {{ /if }}
 </figure>

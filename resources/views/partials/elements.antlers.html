@@ -3,7 +3,7 @@
 {{ /if }}
 
 {{ if type == 'single_image' }}
-  {{ partial:media/single_image :image="single_image" :sizes="['2xl', 'xl', 'lg']" class="w-full h-auto aspect-[16/9]" preset="focal-16-9" }}
+  {{ partial:media/single_image :image="single_image" :caption="null" :sizes="['2xl', 'xl', 'lg']" class="w-full h-auto aspect-[16/9]" preset="focal-16-9" }}
 {{ /if }}
 
 {{ if type == 'anchor' }}
