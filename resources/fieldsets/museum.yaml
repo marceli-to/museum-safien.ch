@@ -47,6 +47,9 @@ fields:
       remove_empty_nodes: true
       type: bard
       display: Leadtext
+      link_collections:
+        - pages
+      container: assets
   -
     handle: information_left_column
     field:
@@ -95,3 +98,6 @@ fields:
       remove_empty_nodes: true
       type: bard
       display: Text
+      link_collections:
+        - pages
+      container: assets
