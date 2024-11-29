@@ -18,7 +18,6 @@ document.addEventListener('DOMContentLoaded', function() {
     caption: function (fancybox, slide) {
       const legend = slide.triggerEl?.querySelector("legend");
       const caption = legend ? legend.innerHTML : slide.caption || "";
-      console.log(caption);
       return  `<div class="font-bold text-xs lg:text-lg -mt-30 lg:-mt-45 max-w-2xl text-center"><div>${caption}</div>`;
     },
   });
